@@ -15,5 +15,9 @@ public class Main {
         Sort sort = new Sort();
         sort.sort(arr);
         System.out.println(Arrays.toString(arr));
+
+        Dog[] dogs = {new Dog(3),new Dog(5),new Dog(1)};
+        sort.sort(dogs);
+        System.out.println(Arrays.toString(dogs));
     }
 }

@@ -13,6 +13,8 @@ public class Mgr01 {
     static {
         INSTANCE = new Mgr01();
     }
+    //关键在于构造方法是private的
+    private Mgr01(){}
 
     public static Mgr01 getInstance(){
         return INSTANCE;
