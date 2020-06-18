@@ -13,7 +13,7 @@ package com.mashibing.dp.strategy.mycode.camparator;
 public interface Comparator<T> {
     int compare(T t1,T t2);
 
-    //1.8以后，可以写方法实现
+    //1.8以后，可以写方法实现;是为了兼容1.8之前的版本
     default void m(){
         System.out.println("m");
     }
