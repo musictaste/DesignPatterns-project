@@ -21,7 +21,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
 
         System.out.println("==============");
-        //lambda表达式
+        //lambda表达式  函数式接口
         sorter.sort(arr,(o1,o2)->{
             if(o1.weight<o2.weight) return -1;
             else if(o1.weight >o2.weight) return 1;
