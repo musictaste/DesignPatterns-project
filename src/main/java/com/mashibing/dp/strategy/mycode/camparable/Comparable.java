@@ -1,7 +1,6 @@
 package com.mashibing.dp.strategy.mycode.camparable;
 
 /**
- * @ClassName Comparable
  * @Description: 自定义一个Comparable接口，使用泛型
  * @Author 李淼
  * @Date 2020/3/20

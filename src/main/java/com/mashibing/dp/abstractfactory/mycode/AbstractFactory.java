@@ -2,7 +2,7 @@ package com.mashibing.dp.abstractfactory.mycode;
 
 /**
  * @ClassName AbstractFactory
- * @Description: TODO
+ * @Description: 抽象的工厂
  * @Author 李淼
  * @Date 2020/3/20
  * @Version V1.0

@@ -1,12 +1,5 @@
 package com.mashibing.dp.strategy.mycode.camparator;
 
-/**
- * @ClassName Cat
- * @Description: TODO
- * @Author 李淼
- * @Date 2020/3/20
- * @Version V1.0
- **/
 public class Cat {
     int weight,height;
 

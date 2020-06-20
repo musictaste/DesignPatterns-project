@@ -2,7 +2,7 @@ package com.mashibing.dp.abstractfactory.mycode;
 
 /**
  * @ClassName Food
- * @Description: TODO
+ * @Description: 抽象的产品
  * @Author 李淼
  * @Date 2020/3/20
  * @Version V1.0
