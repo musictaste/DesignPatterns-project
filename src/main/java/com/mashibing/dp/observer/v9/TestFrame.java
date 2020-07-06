@@ -9,10 +9,14 @@ import java.awt.event.WindowEvent;
 
 public class TestFrame extends Frame {
 	public void launch() {
+		//按钮是事件源对象
 		Button b = new Button("press me");
+		//相当于添加多个观察者Observer
 		b.addActionListener(new MyActionListener());
 		b.addActionListener(new MyActionListener2());
+		//将按钮添加到窗口
 		this.add(b);
+		//窗口把按钮包的严严实实
 		this.pack();
 		
 		this.addWindowListener(new WindowAdapter(){
@@ -31,9 +35,11 @@ public class TestFrame extends Frame {
 		new TestFrame().launch();
 	}
 	
-	private class MyActionListener implements ActionListener { //Observer
+	private class MyActionListener implements ActionListener { //相当于Observer
 
 		public void actionPerformed(ActionEvent e) {
+			//ActionEvent是事件本身，可以通过Event得到Source
+			//通过事件ActionEvent得到事件源Button,修改Button的展示内容
 			((Button)e.getSource()).setLabel("press me again!");
 			System.out.println("button pressed!");
 		}

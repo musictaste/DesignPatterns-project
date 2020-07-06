@@ -17,10 +17,11 @@ class Child {
         observers.add(new Dad());
         observers.add(new Mum());
         observers.add(new Dog());
+
         observers.add((e)->{
             System.out.println("ppp");
         });
-        //hook callback function
+        //hook callback function 钩子函数
     }
 
 
