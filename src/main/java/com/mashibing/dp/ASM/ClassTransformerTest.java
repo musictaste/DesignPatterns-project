@@ -29,8 +29,11 @@ public class ClassTransformerTest {
             }
         };
 
-        cr.accept(cv, 0);
+//        cr.accept(cw,0);//如果只使用了ClassWriter，那么就是把之前的class文件拷贝了一份
+
+        //ClassReader读出原来的class文件，ClassVisitor通过MethodVisitor修改了methed内容，最后ClassVisitor再把修改的class内容交给ClassWriter
         byte[] b2 = cw.toByteArray();
+        cr.accept(cv, 0);
 
         MyClassLoader cl = new MyClassLoader();
         //Class c = cl.loadClass("com.mashibing.dp.ASM.Tank");

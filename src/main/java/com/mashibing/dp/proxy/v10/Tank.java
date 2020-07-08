@@ -45,7 +45,12 @@ public class Tank implements Movable {
     public static void main(String[] args) {
         Tank tank = new Tank();
 
-        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles","true");
+        //ProxyGenerator 代理产生器
+        //saveGeneratedFiles 产生的代理文件保存下来，会在IDEA生成新的文件目录：com.mashibing.dp.proxy.v10下，生成文件$Proxy0.class
+        //打开文件（IDEA帮我们发编译过来了）
+        //如果不确定，可以在IDEA双击shift，输入ProxyGenerator，发现只有java.lang.reflect中存在该类
+        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles","true");//JDK11,13
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");//JDK1.8
 
         Movable m = (Movable)Proxy.newProxyInstance(Tank.class.getClassLoader(),
                 new Class[]{Movable.class}, //tank.class.getInterfaces()

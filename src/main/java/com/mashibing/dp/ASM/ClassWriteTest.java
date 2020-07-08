@@ -4,6 +4,9 @@ import org.objectweb.asm.ClassWriter;
 
 import static org.objectweb.asm.Opcodes.*;
 
+/**
+ * 生成class文件
+ */
 public class ClassWriteTest {
     public static void main(String[] args) {
         ClassWriter cw = new ClassWriter(0);

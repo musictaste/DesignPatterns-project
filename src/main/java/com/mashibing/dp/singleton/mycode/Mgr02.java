@@ -1,6 +1,6 @@
 package com.mashibing.dp.singleton.mycode;
 
-import sun.security.jca.GetInstance;
+//import sun.security.jca.GetInstance;
 
 import java.util.concurrent.TimeUnit;
 

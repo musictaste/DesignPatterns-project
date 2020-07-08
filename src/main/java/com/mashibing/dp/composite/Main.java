@@ -7,6 +7,7 @@ abstract class Node {
     abstract public void p();
 }
 
+//叶子节点
 class LeafNode extends Node {
     String content;
     public LeafNode(String content) {this.content = content;}
@@ -17,6 +18,7 @@ class LeafNode extends Node {
     }
 }
 
+//枝节点
 class BranchNode extends Node {
     List<Node> nodes = new ArrayList<>();
 
@@ -60,6 +62,7 @@ public class Main {
 
     }
 
+    //采用递归来遍历
     static void tree(Node b, int depth) {
         for(int i=0; i<depth; i++) System.out.print("--");
         b.p();

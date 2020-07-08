@@ -40,7 +40,11 @@ public class Tank implements Movable {
         Tank tank = new Tank();
 
         //reflection 通过二进制字节码分析类的属性和方法
-
+        //Proxy.newProxyInstance创建代理对象
+        //newProxyInstance(ClassLoader loader, Class<?>[] interfaces,InvocationHandler h)
+        //参数ClassLoader：你要用哪个ClassLoader把你new的代理对象load到内存
+        //参数interfaces：你这个代理对象要实现哪些接口，由于一个类可以实现多个接口，所以是一个Class数组
+        //参数InvocationHandler：调用+处理器，指被代理对象被调用时我们做什么处理
         Movable m = (Movable)Proxy.newProxyInstance(Tank.class.getClassLoader(),
                 new Class[]{Movable.class}, //tank.class.getInterfaces()
                 new LogHander(tank)

@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
+//@Aspect表示这是一个要往里切的类
 @Aspect
 public class TimeProxy {
 

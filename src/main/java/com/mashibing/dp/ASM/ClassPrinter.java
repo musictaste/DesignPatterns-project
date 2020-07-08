@@ -9,6 +9,12 @@ import java.io.IOException;
 
 import static org.objectweb.asm.Opcodes.ASM4;
 
+/**
+ * 通过ASM来读class文件，利用程序来进行反编译
+ * 通过Vistor模式理解就不难了
+ * 有一个Vistor：ClassVistor
+ * 让ClassReader去访问class文件，让ClassPrinter去打印，访问一个打印一个
+ */
 public class ClassPrinter extends ClassVisitor {
     public ClassPrinter() {
         super(ASM4);
